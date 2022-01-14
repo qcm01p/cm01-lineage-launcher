@@ -315,7 +315,7 @@ namespace LineageConnector
             {
                 windowmode.HideDXWND();
                 Thread.Sleep(150);
-                int successflag = windowmode.RunProcessFromDXWND(500); //너무 빨리 실행하면 뒤지더라..  by.cm01     2022-01-13
+                int successflag = windowmode.RunProcessFromDXWND(550); //너무 빨리 실행하면 뒤지더라..  by.cm01     2022-01-13
                 if (successflag < 0)
                 {
                     Invoke(new MethodInvoker(delegate ()
@@ -325,9 +325,13 @@ namespace LineageConnector
                 }
                 else
                 {
+                    Thread.Sleep(250);
                     Process p = FindNewLineage();
                     if (p != null)
+                    {
                         lineage = new LineageProcess() { Lineage = p };
+                    }
+
                 }
             }
 
@@ -345,12 +349,24 @@ namespace LineageConnector
                     {
                         lineage.CommunicationAddress = Communication;
                         TerminateLineage(lineage);
+                        Invoke(new MethodInvoker(delegate ()
+                        {
+                            label_Status.Text = "Communication Error";
+                        }));
                     }
                     else
                     {
                         string CM01_PATH = Path.Combine(Environment.CurrentDirectory, Import.CM01_DLL_NAME);
-                        if (Import.OpenPS(lineage.Lineage.Id ^ 0x9993, CM01_PATH) < 0)
+                        int result = Import.OpenPS(lineage.Lineage.Id ^ 0x9993, CM01_PATH);
+                        if (result < 0)
+                        {
                             TerminateLineage(lineage);
+                            Invoke(new MethodInvoker(delegate ()
+                            {
+                                label_Status.Text = "게임 실행에 실패했습니다. error:" + result;
+                            }));
+                        }
+
                     }
                 }
                 lock (LineagesLockObj)
