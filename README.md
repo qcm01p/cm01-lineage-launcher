@@ -1,5 +1,5 @@
-# linage-cm01-launcher
-cm01's Linage launcher  
+# lineage-cm01-launcher
+cm01's Lineage launcher  
 Binary file compiled from this project does not use memory hacking skills, it just runs executable file with parameters.  
 In order to compile this file correctly, v2.05.58.g versions of dxwnd.exe, dxwnd.dll, dxwnd.ini and cm01.dll files are required. These files were not uploaded due to copyright and legal issues.  
 The dxwnd-related files that need to be in the Resources folder must be bundled into one compressed file, and the cm01.dll file must also be compressed with cm01.zip.  
