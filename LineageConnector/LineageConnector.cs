@@ -378,10 +378,13 @@ namespace LineageConnector
                             label_Status.Text = "게임을 실행했습니다.";
                         }));
                     }
+                
             }
             Invoke(new MethodInvoker(delegate ()
             {
                 pictureBox_GameStart.Enabled = true; //게임시작 버튼 다시 활성화
+                Thread.Sleep(1000);
+                windowmode.HideDXWND();
             }));
         }
 
