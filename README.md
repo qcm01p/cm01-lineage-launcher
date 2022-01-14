@@ -9,7 +9,7 @@ The dxwnd-related files that need to be in the Resources folder must be bundled 
 프로젝트를 제대로 컴파일 하기 위해서는 v2.05.58.g 버전의 dxwnd.exe와 dxwnd.dll, dxwnd.ini 파일이 필요합니다.  
 또한 이 3개의 파일은 확장자 없이 WindowMode 라는 이름으로 압축된 상태로 Resources 폴더에 위치해야 합니다.  
 cm01.dll 파일 또한 cm01.zip 이름으로 압축되어서 Resources 폴더에 위치해야 정상적으로 컴파일 할 수 있습니다.  
-위에서 언급한 파일들은 저작권 문제 이슈로 인해 함께 업로드 할 수 없습니다. -> Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)  
+위에서 언급한 cm01 및 dxwnd 파일들은 메모리 수정 및 저작권 이슈로 인해 함께 업로드 할 수 없습니다. -> Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)  
   
   
 # 기능 
