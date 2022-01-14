@@ -11,7 +11,7 @@ cm01.dll 파일 또한 cm01.zip 이름으로 압축되어서 Resources 폴더에
 위에서 언급한 파일들은 저작권 문제 이슈로 인해 함께 업로드 할 수 없습니다. -> Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)  
   
   
-# 기
+# 기능 
 1. 종료 시 켜져있는 모든 타겟 게임이 함께 종료됨 (cm01.dll 사용)  
 2. 서버에서 Bad process로 정한 프로세스들이 PC에 존재한다면 자동 종료 (PaymentServer 연동 필요)   
 3. 전체 파일 자동 다운로드 및 압축 해제 (PaymentServer 연동 필요)  
