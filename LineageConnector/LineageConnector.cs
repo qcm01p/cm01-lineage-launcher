@@ -298,7 +298,7 @@ namespace LineageConnector
 
             //여기까지 왔는데 실행파일 못찾았을 경우? 실패다
             if (!File.Exists(START_FILE_NAME)) { Invoke(new MethodInvoker(delegate () { label_Status.Text = "실행 파일을 찾을 수 없습니다. :: " + START_FILE_NAME; pictureBox_GameStart.Enabled = true; })); return; }
-
+            
             //실행파일도 잘 있겠다.. 시작을 해본다.
             LineageProcess lineage = null;
             if (checkBox_WindowMode.Checked == false || !USE_CM01_DLL)
@@ -313,6 +313,7 @@ namespace LineageConnector
             }
             else
             {
+                windowmode.HideDXWND();
                 Thread.Sleep(150);
                 int successflag = windowmode.RunProcessFromDXWND(500); //너무 빨리 실행하면 뒤지더라..  by.cm01     2022-01-13
                 if (successflag < 0)

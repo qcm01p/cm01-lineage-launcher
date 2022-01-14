@@ -11,6 +11,11 @@ namespace LineageConnector
     {
         public const string CM01_DLL_NAME = "cm01.dll";
 
+        public const int SW_HIDE = 0;
+        public const int SW_SHOWNORMAL = 1;
+
+        [DllImport("User32.dll", ExactSpelling = true, CharSet = CharSet.Auto)] public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow); //by.cm01       2022-01-14
+
         [DllImport("kernel32")] public static extern Int32 IsWow64Process(IntPtr hProcess, out Boolean bWow64Process);
 
         [DllImport("kernel32")]

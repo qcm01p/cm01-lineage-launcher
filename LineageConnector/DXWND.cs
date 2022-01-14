@@ -40,9 +40,16 @@ namespace LineageConnector
                 info.WindowStyle = ProcessWindowStyle.Hidden;
 #endif
                 DXWND_PROCESS = Process.Start(info);
+                HideDXWND();
             }
             else DXWND_PROCESS = ExistProcess[0];
             return true;
+        }
+
+        public void HideDXWND() //by.cm01       2022-01-14
+        {
+            if (DXWND_PROCESS != null)
+                Import.ShowWindow(DXWND_PROCESS.MainWindowHandle, Import.SW_HIDE);
         }
 
         public bool ExitDXWND()
